@@ -265,7 +265,7 @@ table {
 </div>
 
 <a href="https://linklist-semesta88.pages.dev/" role="button" class="btn-daftar">
-    LOGIN | DAFTAR | RTP LIVE
+    LOGIN | DAFTAR | RTP LIVE | LIVE CHAT
 </a>
 
 <amp-img
@@ -324,6 +324,18 @@ table {
                 </a>
             </td>
         </tr>
+      <tr>
+    <td>LIVE CHAT</td>
+    <td>
+        <a href="https://chat.onechat.dev/index.html?id=b0074003-4769-465a-8f96-2b0bfb84e98d&language=id&unverifiedAdditionalData=%7B%22custom_action_user_token%22%3A%22_ONLINE_ID_%22%7D"
+           target="_blank"
+           rel="noopener noreferrer"
+           role="button"
+           class="btn-livechat">
+            KLIK DISINI
+        </a>
+    </td>
+</tr>
     </tbody>
 </table>
         <br>
