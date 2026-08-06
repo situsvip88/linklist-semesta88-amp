@@ -18,8 +18,8 @@
 
 <link rel="canonical" href="https://linklist.bio/semesta88/" />
 
-<link rel="icon" href="/favicon.png">
-<link rel="shortcut icon" href="/favicon.png">
+<link rel="icon" href="https://linklist-semesta88-amp.pages.dev/favicon.png">
+<link rel="shortcut icon" href="https://linklist-semesta88-amp.pages.dev/favicon.png">
   
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="SEMESTA88" />
@@ -110,27 +110,33 @@ body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:non
             margin: 0 auto;
         }
 
-        .welcome h3 {
-            font-size: 11px;
-            color: #ffffff;
-            overflow: hidden;
-            border-right: .15em solid #25056e;
-            white-space: nowrap;
-            letter-spacing: .09em;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-        }
+.welcome h3{
+    font-size:11px;
+    color:#fff;
+    overflow:hidden;
+    border-right:.15em solid #25056e;
+    white-space:nowrap;
+    letter-spacing:.09em;
+    animation: blink-caret .75s step-end infinite;
+}
+        
+@keyframes blink{
 
-        @keyframes typing {
-            from {
-                width: 0
-            }
+    0%{
+        opacity:1;
+    }
 
-            to {
-                width: 100%
-            }
-        }
+    50%{
+        opacity:.6;
+    }
 
-        @keyframes blink-caret {
+    100%{
+        opacity:1;
+    }
+
+}
+
+@keyframes blink-caret{
 
             from,
             to {
@@ -147,76 +153,91 @@ body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:non
             box-shadow: 0 0 15px #3a1663;
         }
 
-        .btn-login,
-        .btn-daftar,
-        .btn-livechat {
-            padding: 10px;
-            color: #84ff00;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            text-align: center;
-            background: linear-gradient(to bottom, #25056e 0%, #1a0033 100%);
-            margin-top: 10px;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 4px 10px rgba(74, 20, 140, 0.4);
-        }
-
+.btn-login,
 .btn-daftar{
-    animation: blink .5s step-end infinite;
-}
-      
-.btn-livechat {
-    background: linear-gradient(to bottom, #25056e 0%, #210062 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    min-height:42px;
+    padding:10px 14px;
+
+    position:relative;
+    overflow:hidden;
+
+    border-radius:10px;
+    border:2px solid #ff4dff;
+
+    background:linear-gradient(180deg,#9b00ff,#5a00b8,#32006a);
+
+    color:#84ff00;
+    font-size:16px;
+    font-weight:bold;
+
+    text-shadow:
+        0 0 6px #84ff00,
+        0 0 12px #84ff00;
+
+box-shadow:
+    0 0 10px rgba(255,0,255,.45),
+    0 0 20px rgba(255,0,255,.30),
+    0 0 35px rgba(161,0,255,.20);
+
     animation:
         blink .5s step-end infinite,
         livechatGlow 1.2s ease-in-out infinite;
-    box-shadow: 0 0 8px rgba(255,0,255,.5);
-transition: transform .3s ease, box-shadow .3s ease;
-}
 
-.btn-livechat:hover{
-    transform: translateY(-2px) scale(1.08);
-    box-shadow:
-        0 0 10px #ff00ff,
-        0 0 20px #ff00ff,
-        0 0 35px #a100ff,
-        0 0 60px rgba(255,0,255,.45);
-}
-
-.btn-login{
-    background: linear-gradient(to bottom, #25056e 0%, #1a0033 100%);
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        filter .3s ease;
 }
 
 @keyframes livechatGlow{
 
-    0% {
-        transform: scale(1);
-        box-shadow:
-            0 0 6px rgba(255,0,255,.4),
-            0 0 12px rgba(255,0,255,.2);
-    }
+0%,100%{
+
+    transform:scale(1);
+
+    filter:brightness(1);
+
+box-shadow:
+    0 0 10px rgba(255,0,255,.40),
+    0 0 20px rgba(255,0,255,.25),
+    inset 0 0 6px rgba(255,255,255,.05);
+
+}
 
 50%{
-    transform: scale(1.08);
 
     box-shadow:
-        0 0 20px rgba(255,0,255,1),
-        0 0 40px rgba(161,0,255,.9),
-        0 0 65px rgba(255,0,255,.6);
+        0 0 18px #ff00ff,
+        0 0 35px rgba(255,0,255,.70),
+        0 0 60px rgba(161,0,255,.45);
 }
 
-    100% {
-        transform: scale(1);
-        box-shadow:
-            0 0 6px rgba(255,0,255,.4),
-            0 0 12px rgba(255,0,255,.2);
-    }
+}
+
+.btn-login:hover,
+.btn-daftar:hover{
+
+transform:translateY(-3px) scale(1.08);
+
+    filter:brightness(1.2);
+
+    box-shadow:
+        0 0 15px #ff00ff,
+        0 0 30px rgba(255,0,255,.70),
+        0 0 45px rgba(161,0,255,.50);
 
 }
+
+.btn-login:active,
+.btn-daftar:active{
+    transform:scale(.97);
+}
+
 .copyright {
     text-align: center;
     color: #513b70;
@@ -252,22 +273,21 @@ table {
             color: #84ff00;
         }
 
-        td a {
-            display: inline-block;
-            padding: 5px 5px;
-            color: #84ff00;
-            text-decoration: none;
-            background: linear-gradient(to bottom, #25056e 0%, #311b92 100%);
-            border-radius: 5px;
-            margin: 1px 0;
-            font-size: 11px;
-            line-height: 0.8;
-        }
+td a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-        td:first-child {
-            font-size: 14px;
-            padding: 2px;
-        }
+    width:92%;
+    margin:4px auto;
+
+    text-decoration:none;
+}
+
+td:first-child {
+    font-size: 14px;
+    padding: 2px;
+}
     </style>
 </head>
 
@@ -312,26 +332,26 @@ table {
 
     <tbody>
         <tr>
-            <td>LOGIN SEMESTA88</td>
+            <td>LOGIN AKUN</td>
             <td>
                 <a href="https://link-masuk-semesta88.com/masuk"
                    target="_blank"
                    rel="noopener noreferrer"
                    role="button"
-                   class="btn-daftar">
+              class="btn-daftar">
                     KLIK DISINI
                 </a>
             </td>
         </tr>
 
         <tr>
-            <td>DAFTAR SEMESTA88</td>
+            <td>DAFTAR AKUN</td>
             <td>
                 <a href="https://link-masuk-semesta88.com/daftar"
                    target="_blank"
                    rel="noopener noreferrer"
                    role="button"
-                   class="btn-daftar">
+           class="btn-daftar">
                     KLIK DISINI
                 </a>
             </td>
@@ -344,7 +364,7 @@ table {
                    target="_blank"
                    rel="noopener noreferrer"
                    role="button"
-                   class="btn-daftar">
+                     class="btn-daftar">
                     KLIK DISINI
                 </a>
             </td>
@@ -356,7 +376,7 @@ table {
            target="_blank"
            rel="noopener noreferrer"
            role="button"
-           class="btn-livechat">
+             class="btn-daftar">
             KLIK DISINI
         </a>
     </td>
